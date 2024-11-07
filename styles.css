@@ -1,0 +1,144 @@
+body, html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: #333;
+}
+
+canvas {
+  background-color: #fff;
+}
+
+#inventory {
+  margin-left: 50px;
+  justify-content: center;
+  align-items: center;
+  width: 500px; /* Ширина инвентаря */
+  height: 500px; /* Высота инвентаря */
+  background: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
+  border: 1px solid #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column-reverse; /* Новые предметы добавляются сверху */
+  align-items: center;
+}
+
+
+.item {
+  width: 50px; /* Ширина ячейки артефакта */
+  height: 50px; /* Высота ячейки артефакта */
+  border: 1px solid #000;
+  margin: 5px 0; /* Расстояние между ячейками */
+  background-color: #e0e0e0;
+  text-align: center;
+  line-height: 40px;
+  font-size: 10px;
+  cursor: pointer;
+}
+
+#inventoryButton {
+  position: absolute;
+  bottom: 10px;
+  right: 80px;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#closeInventory {
+  margin-top: 10px;
+  padding: 5px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#gameOverOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+#medkit {
+  background-image: url('medkit.png'); /* Укажите путь к изображению */
+  background-size: contain; /* Размер изображения будет адаптироваться */
+  background-repeat: no-repeat; /* Изображение не будет повторяться */
+  background-position: center; /* Центрирование изображения */
+  width: 50px; /* Ширина элемента, можно настроить */
+  height: 50px; /* Высота элемента, можно настроить */
+  text-indent: -9999px; /* Скрыть текст "Аптечка" */
+}
+
+#labButton {
+  position: absolute;
+  bottom: 10px;
+  right: 180px;
+  padding: 10px;
+  background: #6a0dad;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#labInterface {
+  position: relative;
+  bottom: 550px;
+  right: 800px;
+  width: 500px; /* Ширина элемента, можно настроить */
+  height: 500px; /* Высота элемента, можно настроить */
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+#labTable .selected-item {
+  /* width: 100px;
+  height: 100px; */
+  border: 1px solid #000;
+  margin: 10px;
+  display: inline-block;
+  background-color: #e0e0e0;
+  text-align: center;
+  line-height: 100px;
+  font-size: 14px;
+}
+
+#combineButton {
+  margin-top: 10px;
+  padding: 10px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#closeLab {
+  margin-top: 10px;
+  padding: 5px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

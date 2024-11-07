@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Circle Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <canvas id="gameCanvas" width="1500" height="1500"></canvas>
+  <!-- <button id="inventoryButton">Инвентарь</button> -->
+  <div id="inventory">
+    <!-- <button id="closeInventory">Закрыть</button> -->
+    <div class="item" id="medkit" title="Аптечка">Аптечка</div>
+  </div>
+  <div id="gameOverOverlay">Вас убили</div>
+
+  <button id="labButton" style="display: none;">Лаборатория</button>
+  <div id="labInterface" style="display: none;">
+    <div style="display: flex; flex-direction: column;
+    align-items: center;">
+      <h3>Лаборатория</h3>
+      <div id="labTable">
+        <div class="selected-item" id="artifactSlot1">Выберите артефакт</div>
+        <div class="selected-item" id="artifactSlot2">Выберите артефакт</div>
+      </div>
+      <button id="combineButton">Соединить</button>
+      <button id="closeLab">Закрыть</button>
+    </div>
+  </div>
+
+  <script type="module" src="canvas.js"></script>
+  <script type="module" src="lab.js"></script>
+  <script type="module" src="hero.js"></script>
+  <script type="module" src="artifacts.js"></script>
+  <script type="module" src="enemy.js"></script>
+  <script type="module" src="areas.js"></script>
+  <script type="module" src="inventory.js"></script>
+  <script type="module" src="game.js"></script>
+  
+</body>
+</html>
